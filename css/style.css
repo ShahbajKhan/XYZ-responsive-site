@@ -273,9 +273,6 @@ img {
 /* Responsiveness */
 
 @media (max-width:768px) {
-    /* Navbar */
-    
-
     /* show section */
     .show{
         height: 100%;
@@ -298,7 +295,7 @@ img {
     .numericSection-heading{
         width: 100%;
     }
-    .numericSection .grid, {
+    .numericSection .grid {
         grid-template-columns: repeat(1,1fr);
     }
     .stats-div{
