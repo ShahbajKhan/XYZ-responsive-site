@@ -92,6 +92,7 @@ img {
 
 .showcaseText {
     color: white;
+    animation: slideInFromLeft 1s ease-in;
 }
 
 .showcaseText p {
@@ -103,6 +104,8 @@ img {
     position: relative;
     top: 80px;
     padding: 30px;
+    /* z-index: 100; */
+    animation: slideInFromRight 1s ease-in;
 }
 .card input {
     outline: none;
@@ -132,6 +135,7 @@ img {
 
 .numericSection {
     margin-top: 100px;
+    animation: slideInFromBottom 1s ease-in;
 }
 
 .numericSection-heading {
@@ -269,6 +273,39 @@ img {
 .footerSection i {
     padding-left: 10px;
 }
+/* Animations */
+@keyframes slideInFromLeft{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes slideInFromRight{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes slideInFromTop{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes slideInFromBottom{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
 
 /* Responsiveness */
 
@@ -283,9 +320,13 @@ img {
         padding-top: 30px;
         text-align: center;
     }
+    .showcaseText{
+        animation: slideInFromTop 1s ease-in;
+    }
     .showcaseForm {
         top: 0;
         margin: 0 auto;
+        animation: slideInFromBottom 1s ease-in;
     }  
     /* Numeric section */
     .numericSection {
@@ -316,8 +357,7 @@ img {
 }
 @media (max-width: 500px){
     .navbar .flex{
-        flex-direction: column;
-        
+        flex-direction: column; 
     }
     .navLinks{
         height: 100px;
